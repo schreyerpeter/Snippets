@@ -9,7 +9,7 @@ interface SnippetEditPageProps {
   };
 }
 
-export const getSnippet = cache(async (id: string) => {
+const getSnippet = cache(async (id: string) => {
   const snippet = await db.snippet.findFirst({
     where: { id: parseInt(id) },
   });
