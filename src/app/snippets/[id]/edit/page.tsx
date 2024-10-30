@@ -4,9 +4,9 @@ import { notFound } from 'next/navigation';
 import { cache } from 'react';
 
 interface SnippetEditPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 const getSnippet = cache(async (id: string) => {
